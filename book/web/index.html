@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Library Home Page</title>
+<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+</head>
+<body>
+	
+	<div id="header">
+			<img class="logo_img" alt="" src="static/img/logo.jpg" >
+			<span class="wel_word">Online Library</span>
+			<div>
+				<a href="pages/user/login.html">Login</a> |
+				<a href="pages/user/regist.html">Register</a> &nbsp;
+				<a href="pages/cart/cart.html">Cart</a>&nbsp; &nbsp;
+				<a href="pages/manager/manager.html">Manage</a>
+			</div>
+	</div>
+	<div id="main">
+		<div id="book">
+			<div class="book_cond">
+				<form action="" method="get">
+					Price：<input id="min" type="text" name="min" value=""> $ -
+						<input id="max" type="text" name="max" value=""> $
+						<input type="submit" value="Search" />
+				</form>
+			</div>
+			<div style="text-align: center">
+				<span>Your cart has 3 items</span>
+				<div>
+					You just put <span style="color: #ff0000">A Brief History of Time</span> in your cart
+				</div>
+			</div>
+			<div class="b_list">
+				<div class="img_div">
+					<img class="book_img" alt="" src="static/img/default1.jpg" />
+				</div>
+				<div class="book_info">
+					<div class="book_name">
+						<span class="sp1">Name:</span>
+						<span class="sp2">A Brief History of Time</span>
+					</div>
+					<div class="book_author">
+						<span class="sp1">Author:</span>
+						<span class="sp2">Stephen Hawking</span>
+					</div>
+					<div class="book_price">
+						<span class="sp1">Price:</span>
+						<span class="sp2">$68.00</span>
+					</div>
+					<div class="book_sales">
+						<span class="sp1">Sales:</span>
+						<span class="sp2">230</span>
+					</div>
+					<div class="book_amount">
+						<span class="sp1">Stock:</span>
+						<span class="sp2">1000</span>
+					</div>
+					<div class="book_add">
+						<button>Add to cart</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="b_list">
+				<div class="img_div">
+					<img class="book_img" alt="" src="static/img/default2.jpg" />
+				</div>
+				<div class="book_info">
+					<div class="book_name">
+						<span class="sp1">Name:</span>
+						<span class="sp2">Thinking in JAVA</span>
+					</div>
+					<div class="book_author">
+						<span class="sp1">Author:</span>
+						<span class="sp2">Bruce Eckel</span>
+					</div>
+					<div class="book_price">
+						<span class="sp1">Price:</span>
+						<span class="sp2">$50.00</span>
+					</div>
+					<div class="book_sales">
+						<span class="sp1">Sales:</span>
+						<span class="sp2">230</span>
+					</div>
+					<div class="book_amount">
+						<span class="sp1">Stock:</span>
+						<span class="sp2">1000</span>
+					</div>
+					<div class="book_add">
+						<button>Add to cart</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="b_list">
+				<div class="img_div">
+					<img class="book_img" alt="" src="static/img/default3.jpg" />
+				</div>
+				<div class="book_info">
+					<div class="book_name">
+						<span class="sp1">Name:</span>
+						<span class="sp2">Introduction to Algorithms</span>
+					</div>
+					<div class="book_author">
+						<span class="sp1">Author:</span>
+						<span class="sp2">Thomas H. Cormen</span>
+					</div>
+					<div class="book_price">
+						<span class="sp1">Price:</span>
+						<span class="sp2">$67.00</span>
+					</div>
+					<div class="book_sales">
+						<span class="sp1">Sales:</span>
+						<span class="sp2">230</span>
+					</div>
+					<div class="book_amount">
+						<span class="sp1">Stock:</span>
+						<span class="sp2">1000</span>
+					</div>
+					<div class="book_add">
+						<button>Add to cart</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="b_list">
+				<div class="img_div">
+					<img class="book_img" alt="" src="static/img/default4.jpg" />
+				</div>
+				<div class="book_info">
+					<div class="book_name">
+						<span class="sp1">Name:</span>
+						<span class="sp2">Computer Networking</span>
+					</div>
+					<div class="book_author">
+						<span class="sp1">Author:</span>
+						<span class="sp2">Jim Kurose</span>
+					</div>
+					<div class="book_price">
+						<span class="sp1">Price:</span>
+						<span class="sp2">$30.00</span>
+					</div>
+					<div class="book_sales">
+						<span class="sp1">Sales:</span>
+						<span class="sp2">230</span>
+					</div>
+					<div class="book_amount">
+						<span class="sp1">Stock:</span>
+						<span class="sp2">1000</span>
+					</div>
+					<div class="book_add">
+						<button>Add to cart</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page_nav">
+		<a href="#">First page</a>
+		<a href="#">Previous</a>
+		<a href="#">3</a>
+			[<div id="page_num" style="font-weight: bold"> 4 </div>]
+		<a href="#">5</a>
+		<a href="#">Next</a>
+		<a href="#">Last page</a>
+		10 pages，30 results &nbsp; To page<input value="4" name="pn" id="pn_input"/>
+		<input type="button" value="Enter">
+		</div>
+	
+	</div>
+	
+	<div id="bottom">
+		<span>
+			Yihang Online library@2021
+		</span>
+	</div>
+</body>
+</html>

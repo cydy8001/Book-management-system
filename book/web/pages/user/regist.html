@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create your account</title>
+	<base href="http://localhost:8080/book/">
+<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+	<script type="text/javascript" src="static/script/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		$(function (){
+			$("#sub_btn").click(function (){
+				// Verify Username
+				var usernameText = $("#username").val();
+				var usernamePatt = /^\w{5,12}$/;
+				if(!usernamePatt.test(usernameText)){
+					$("span.errorMsg").text("Illegal username!");
+					return false
+				}
+				// Check password
+				var passwordText = $("#password").val();
+				var passwordPatt = /^\w{5,12}$/;
+				if(!passwordPatt.test(passwordText)){
+					$("span.errorMsg").text("Illegal password!");
+					return false
+				}
+
+				// Check 2nd-time password
+				var repwdText = $("#repwd").val();
+				if(!repwdText != passwordText){
+					$("span.errorMsg").text("Passwords are different");
+					return false
+				}
+
+
+				var emailText = $("email").val();
+				var emailPatt = /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/;
+				if (!emailPatt.test(emailText)){
+					$("span.errorMsg").text("Illegal email address");
+					return false;
+				}
+				// Verification code
+				var codeText = $("#code").val();
+
+
+				codeText = $.trim(codeText);
+
+				if (codeText == null || codeText == "") {
+					$("span.errorMsg").text("Code cannot be empty");
+
+					return false;
+				}
+
+				$("span.errorMsg").text("");
+			});
+
+
+
+
+
+		});
+
+	</script>
+<style type="text/css">
+	.login_form{
+		height:420px;
+		margin-top: 25px;
+	}
+	
+</style>
+</head>
+<body>
+		<div id="login_header">
+			<img class="logo_img" alt="" src="static/img/logo.jpg" >
+		</div>
+		
+			<div class="login_banner">
+			
+				<div id="l_content">
+					<span class="login_word">Welcome to register</span>
+				</div>
+				
+				<div id="content">
+					<div class="login_form">
+						<div class="login_box">
+							<div class="tit">
+								<h1>Register an account</h1>
+								<span class="errorMsg"></span>
+							</div>
+							<div class="form">
+								<form action="regist_success.html">
+									<label>Username：</label>
+									<input class="itxt" type="text" placeholder="Type your username" autocomplete="off" tabindex="1" name="username" id="username" />
+									<br />
+									<br />
+									<label>Password：</label>
+									<input class="itxt" type="password" placeholder="Type your password" autocomplete="off" tabindex="1" name="password" id="password" />
+									<br />
+									<br />
+									<label>Verify：</label>
+									<input class="itxt" type="password" placeholder="Verify new password" autocomplete="off" tabindex="1" name="repwd" id="repwd" />
+									<br />
+									<br />
+									<label>Email：</label>
+									<input class="itxt" type="text" placeholder="Enter email address" autocomplete="off" tabindex="1" name="email" id="email" />
+									<br />
+									<br />
+									<label>Code：</label>
+									<input class="itxt" type="text" name="code" style="width: 150px;" id="code" value="abcde"/>
+									<img alt="" src="static/img/code.bmp" style="float: right; margin-right: 40px">
+									<br />
+									<br />
+									<input type="submit" value="register" id="sub_btn" />
+									
+								</form>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		<div id="bottom">
+			<span>
+				Yihang Online library@2021
+			</span>
+		</div>
+</body>
+</html>
